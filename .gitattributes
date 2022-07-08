@@ -1,3 +1,9 @@
+*.dart linguist-vendored=false
+*.xcodeproj linguist-vendored=false
+*.swift linguist-vendored=false
+*.java linguist-detectable=false
+*.jav linguist-detectable=false
+*.kt linguist-detectable=false
 *.js linguist-detectable=true
 *.html linguist-detectable=true
 *.xml linguist-detectable=true
