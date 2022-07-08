@@ -1,5 +1,9 @@
-*.dart linguist-vendored=true
-*.xcodeproj linguist-vendored=true
-*.swift linguist-vendored=true
-*.java linguist-detectable=true
-*.jav linguist-detectable=true
+*.js linguist-detectable=true
+*.html linguist-detectable=true
+*.xml linguist-detectable=true
+*.cmake linguist-detectable=true
+".cpp" linguist-detectable=true
+".c++" linguist-detectable=true
+".cc" linguist-detectable=true
+".cp" linguist-detectable=true
+".c" linguist-detectable=true
