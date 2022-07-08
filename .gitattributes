@@ -1,0 +1,15 @@
+*.dart linguist-vendored=true
+*.xcodeproj linguist-vendored=true
+*.swift linguist-vendored=true
+*.java linguist-detectable=true
+*.jav linguist-detectable=true
+*.kt linguist-detectable=true
+*.js linguist-detectable=false
+*.html linguist-detectable=false
+*.xml linguist-detectable=false
+*.cmake linguist-detectable=false
+".cpp" linguist-detectable=false
+".c++" linguist-detectable=false
+".cc" linguist-detectable=false
+".cp" linguist-detectable=false
+".c" linguist-detectable=false
