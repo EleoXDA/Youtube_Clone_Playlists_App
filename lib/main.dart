@@ -36,7 +36,7 @@ class PlaylistsApp extends StatelessWidget {
       title: 'FlutterDev Playlists',
       theme: FlexColorScheme.light(scheme: FlexScheme.red).toTheme,
       darkTheme: FlexColorScheme.dark(scheme: FlexScheme.red).toTheme,
-      themeMode: ThemeMode.dark, // Or ThemeMode.System if you'd prefer
+      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: const Playlists(),
     );
