@@ -1,2 +1,6 @@
-* linguist-vendored
-*.dart linguist-vendored=false
+*.cmake linguist-detectable=false
+".cpp" linguist-detectable=false
+".c++" linguist-detectable=false
+".cc" linguist-detectable=false
+".cp" linguist-detectable=false
+".c" linguist-detectable=false
