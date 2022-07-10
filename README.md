@@ -1,4 +1,4 @@
-# adaptive_app
+# FlutterPlaylists_Youtube_App
 
 A new Flutter project.
 
