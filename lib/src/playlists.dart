@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:googleapis/youtube/v3.dart';
 import 'package:provider/provider.dart';
 
+import 'adaptive_image.dart';
 import 'app_state.dart';
 
 class Playlists extends StatelessWidget {
@@ -70,7 +71,7 @@ class _PlaylistsListViewState extends State<_PlaylistsListView> {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListTile(
-            leading: Image.network(
+            leading: AdaptiveImage.network(
               playlist.snippet!.thumbnails!.default_!.url!,
             ),
             title: Text(playlist.snippet!.title!),
