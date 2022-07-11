@@ -1,6 +1,6 @@
-# FlutterPlaylists_Youtube_App
+# Flutter Playlists Youtube_App
 
-A new Flutter project.
+This app generates a cross-platform app that works on Android, iOS, MacOS, Linux, Windows and Web. This app shows playlists from Flutter YouTube channel.
 
 ## Getting Started
 
