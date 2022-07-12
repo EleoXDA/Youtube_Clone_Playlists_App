@@ -16,8 +16,8 @@ final scopes = [
 
 // TODO: Replace with your Client ID and Client Secret for Desktop configuration
 final clientId = ClientId(
-  'TODO-Client-ID.apps.googleusercontent.com',
-  'TODO-Client-secret',
+  '371277337694-01thn1rus1j9fo116olv3avn7dth9thk.apps.googleusercontent.com',
+  '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',
 );
 
 void main() {
