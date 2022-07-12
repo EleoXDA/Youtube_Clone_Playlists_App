@@ -19,9 +19,9 @@ class AdaptivePlaylists extends StatelessWidget {
       return const NarrowDisplayPlaylists();
     } else {
       return const WideDisplayPlaylists();
-    }
-  }
-}
+    } // if
+  } // build
+} // AdaptivePlaylists
 
 class NarrowDisplayPlaylists extends StatelessWidget {
   const NarrowDisplayPlaylists({
@@ -43,25 +43,25 @@ class NarrowDisplayPlaylists extends StatelessWidget {
                   body: PlaylistDetails(
                     playlistId: playlist.id!,
                     playlistName: playlist.snippet!.title!,
-                  ),
-                );
-              },
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
+                  ), // PlaylistDetails
+                ); // Scaffold
+              }, // builder
+            ), // MaterialPageRoute
+          ); // Navigator.push
+        }, // playlistSelected
+      ), // Playlists
+    ); // Scaffold
+  } // build
+} // NarrowDisplayPlaylists
 
 class WideDisplayPlaylists extends StatefulWidget {
   const WideDisplayPlaylists({
     Key? key,
-  }) : super(key: key);
+  }) : super(key: key); // WideDisplayPlaylists
 
   @override
   State<WideDisplayPlaylists> createState() => _WideDisplayPlaylistsState();
-}
+} // WideDisplayPlaylists
 
 class _WideDisplayPlaylistsState extends State<WideDisplayPlaylists> {
   Playlist? selectedPlaylist;
@@ -72,15 +72,15 @@ class _WideDisplayPlaylistsState extends State<WideDisplayPlaylists> {
         title: selectedPlaylist == null
             ? const Text('User Playlists')
             : Text('User Playlist: ${selectedPlaylist!.snippet!.title!}'),
-      ),
+      ), // AppBar
       body: SplitView(
         viewMode: SplitViewMode.Horizontal,
         children: [
           Playlists(playlistSelected: (playlist) {
             setState(() {
               selectedPlaylist = playlist;
-            });
-          }),
+            }); // setState
+          }), // Playlists
           if (selectedPlaylist != null)
             PlaylistDetails(
                 playlistId: selectedPlaylist!.id!,
@@ -88,9 +88,9 @@ class _WideDisplayPlaylistsState extends State<WideDisplayPlaylists> {
           else
             const Center(
               child: Text('Select a playlist'),
-            ),
-        ],
-      ),
-    );
-  }
-}
+            ), // Center
+        ], // children
+      ), // SplitView
+    ); // Scaffold
+  } // build
+} // _WideDisplayPlaylistsState

@@ -23,8 +23,8 @@ void main() {
   runApp(ChangeNotifierProvider<AuthedUserPlaylists>(
     create: (context) => AuthedUserPlaylists(),
     child: const PlaylistsApp(),
-  ));
-}
+  )); //  ChangeNotifierProvider
+} //  main
 
 class PlaylistsApp extends StatelessWidget {
   const PlaylistsApp({Key? key}) : super(key: key);
@@ -41,11 +41,11 @@ class PlaylistsApp extends StatelessWidget {
         builder: (context, authClient) {
           context.read<AuthedUserPlaylists>().authClient = authClient;
           return const AdaptivePlaylists();
-        },
+        }, // AdaptiveLogin.builder
         clientId: clientId,
         scopes: scopes,
         loginButtonChild: const Text('Login to YouTube'),
-      ),
-    );
-  }
-}
+      ), // AdaptiveLogin
+    ); // MaterialApp
+  } // build
+} // PlaylistsApp

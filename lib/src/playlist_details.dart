@@ -25,7 +25,7 @@ class PlaylistDetails extends StatelessWidget {
 
         return _PlaylistDetailsListView(playlistItems: playlistItems);
       },
-    );
+    ); // Consumer
   }
 }
 
@@ -69,17 +69,17 @@ class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
               alignment: Alignment.center,
               children: [
                 if (playlistItem.snippet!.thumbnails!.high != null)
-                  AdaptiveImage.network(
-                      playlistItem.snippet!.thumbnails!.high!.url!),
+                  AdaptiveImage.network(playlistItem.snippet!.thumbnails!.high!
+                      .url!), // AdaptiveImage.network
                 _buildGradient(context),
                 _buildTitleAndSubtitle(context, playlistItem),
                 _buildPlayButton(context, playlistItem),
               ],
-            ),
-          ),
-        );
+            ), // Stack
+          ), // ClipRRect
+        ); // Padding
       },
-    );
+    ); // ListView.builder
   }
 
   Widget _buildGradient(BuildContext context) {

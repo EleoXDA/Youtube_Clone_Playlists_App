@@ -8,7 +8,7 @@ class AuthedUserPlaylists extends ChangeNotifier {
   set authClient(http.Client client) {
     _api = YouTubeApi(client);
     _loadPlaylists();
-  }
+  } //  set authClient
 
   Future<void> _loadPlaylists() async {
     String? nextPageToken;
@@ -20,14 +20,14 @@ class AuthedUserPlaylists extends ChangeNotifier {
         mine: true,
         maxResults: 50,
         pageToken: nextPageToken,
-      );
+      ); // await _api.playlists.list
       _playlists.addAll(response.items!);
       _playlists.sort((a, b) => a.snippet!.title!
           .toLowerCase()
           .compareTo(b.snippet!.title!.toLowerCase()));
       notifyListeners();
     } while (nextPageToken != null);
-  }
+  } //  _loadPlaylists
 
   YouTubeApi? _api;
 
@@ -39,9 +39,9 @@ class AuthedUserPlaylists extends ChangeNotifier {
     if (!_playlistItems.containsKey(playlistId)) {
       _playlistItems[playlistId] = [];
       _retrievePlaylist(playlistId);
-    }
+    } //  if  (!_playlistItems.containsKey)
     return UnmodifiableListView(_playlistItems[playlistId]!);
-  }
+  } // playlistItems
 
   Future<void> _retrievePlaylist(String playlistId) async {
     String? nextPageToken;
@@ -51,13 +51,13 @@ class AuthedUserPlaylists extends ChangeNotifier {
         playlistId: playlistId,
         maxResults: 25,
         pageToken: nextPageToken,
-      );
+      ); // await _api.playlistItems.list
       var items = response.items;
       if (items != null) {
         _playlistItems[playlistId]!.addAll(items);
-      }
+      } // if (items != null)
       notifyListeners();
       nextPageToken = response.nextPageToken;
     } while (nextPageToken != null);
-  }
-}
+  } // _retrievePlaylist
+} // AuthedUserPlaylists

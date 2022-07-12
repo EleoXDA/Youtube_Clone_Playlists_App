@@ -18,15 +18,16 @@ class Playlists extends StatelessWidget {
         if (playlists.isEmpty) {
           return const Center(
             child: CircularProgressIndicator(),
-          );
+            // ignore: todo
+          ); // TODO: Show a message saying "No playlists found" // Center
         }
 
         return _PlaylistsListView(
           items: playlists,
           playlistSelected: playlistSelected,
-        );
+        ); // _PlaylistsListView
       },
-    );
+    ); // Consumer
   }
 }
 
@@ -73,17 +74,17 @@ class _PlaylistsListViewState extends State<_PlaylistsListView> {
           child: ListTile(
             leading: AdaptiveImage.network(
               playlist.snippet!.thumbnails!.default_!.url!,
-            ),
+            ), // AdaptiveImage.network
             title: Text(playlist.snippet!.title!),
             subtitle: Text(
               playlist.snippet!.description!,
-            ),
+            ), // Text
             onTap: () {
               widget.playlistSelected(playlist);
             },
-          ),
-        );
+          ), // ListTile
+        ); // Padding
       },
-    );
+    ); // ListView.builder
   }
 }

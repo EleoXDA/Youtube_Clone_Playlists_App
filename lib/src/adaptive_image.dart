@@ -8,14 +8,15 @@ class AdaptiveImage extends StatelessWidget {
           .replace(host: 'localhost', port: 8080, scheme: 'http')
           .toString();
     } else {
+      // if (kIsWeb)
       _url = url;
-    }
-  }
+    } // if (kIsWeb)
+  } // AdaptiveImage.network
 
   late final String _url;
 
   @override
   Widget build(BuildContext context) {
     return Image.network(_url);
-  }
-}
+  } // build
+} // AdaptiveImage

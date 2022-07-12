@@ -13,6 +13,6 @@ class AdaptiveText extends StatelessWidget {
         return Text(data, style: style);
       default:
         return SelectableText(data, style: style);
-    }
-  }
-}
+    } // switch
+  } // build
+} // AdaptiveText
