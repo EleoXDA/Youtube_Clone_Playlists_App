@@ -16,7 +16,7 @@ class PlaylistDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<FlutterDevPlaylists>(
+    return Consumer<AuthedUserPlaylists>(
       builder: (context, playlists, _) {
         final playlistItems = playlists.playlistItems(playlistId: playlistId);
         if (playlistItems.isEmpty) {
