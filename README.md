@@ -1,6 +1,6 @@
-# Flutter Playlists Youtube_App
+# Youtube App Clone (Playlists)
 
-This app generates a cross-platform app that works on Android, iOS, MacOS, Linux, Windows and Web. This app shows playlists from Flutter YouTube channel.
+This app generates a cross-platform app that works on Android, iOS, MacOS, Linux, Windows and Web. This app shows playlists of your Youtube Channel once you securely log in to your Google Account.
 
 ## Getting Started
 
