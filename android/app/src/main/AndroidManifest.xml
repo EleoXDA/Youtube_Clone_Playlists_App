@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.adaptive_app">
+    package="com.eleo.youtubeclone">
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -15,7 +15,7 @@
         </intent>
     </queries>
     <application
-        android:label="adaptive_app"
+        android:label="youtube_clone"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
