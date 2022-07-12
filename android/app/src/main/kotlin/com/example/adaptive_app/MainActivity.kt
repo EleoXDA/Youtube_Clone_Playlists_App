@@ -1,4 +1,4 @@
-package com.example.adaptive_app
+package com.eleo.youtubeclone
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,6 +1,6 @@
 {
-    "name": "adaptive_app",
-    "short_name": "adaptive_app",
+    "name": "youtube_clone",
+    "short_name": "youtube_clone",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
